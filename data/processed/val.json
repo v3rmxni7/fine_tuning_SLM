@@ -1,0 +1,602 @@
+[
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Meet Amanda Wilson, a ux designer who has been in the industry for 6 years. Their expertise includes Docker, REST APIs, Deep Learning and Node.js.",
+    "output": "{\"name\": \"Amanda Wilson\", \"role\": \"UX Designer\", \"experience\": \"6 years\", \"skills\": [\"Docker\", \"REST APIs\", \"Deep Learning\", \"Node.js\"], \"education\": null}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Nancy Brown is a security engineer specializing in NumPy, Elasticsearch and Linux. Graduated with a Bachelor's in Computer Science from UIUC.",
+    "output": "{\"name\": \"Nancy Brown\", \"role\": \"Security Engineer\", \"experience\": null, \"skills\": [\"NumPy\", \"Elasticsearch\", \"Linux\"], \"education\": \"Bachelor's in Computer Science from UIUC\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Platform Engineer | Spotify | 7 years experience | Skills: mentoring, open source, brand strategy | Previously: Shopify | MBA from University of Washington",
+    "output": "{\"name\": null, \"role\": \"Platform Engineer\", \"company\": \"Spotify\", \"previous_companies\": [\"Shopify\"], \"experience\": \"7 years\", \"skills\": [\"mentoring\", \"open source\", \"brand strategy\"], \"education\": \"MBA from University of Washington\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Experienced data scientist Mason Young has spent 12 years working with JIRA and Data Analysis. Educational background includes a Master's in Computer Science from UIUC.",
+    "output": "{\"name\": \"Mason Young\", \"role\": \"Data Scientist\", \"experience\": \"12 years\", \"skills\": [\"JIRA\", \"Data Analysis\"], \"education\": \"Master's in Computer Science from UIUC\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "As a mobile developer, Pavel Dubois brings 7 years of hands-on experience in Scikit-learn and FastAPI. Academic credentials: Master's in Computer Science from Oxford.",
+    "output": "{\"name\": \"Pavel Dubois\", \"role\": \"Mobile Developer\", \"experience\": \"7 years\", \"skills\": [\"Scikit-learn\", \"FastAPI\"], \"education\": \"Master's in Computer Science from Oxford\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "HP's UltraBook Ultra laptop ($1458) offers M2 chip, Intel i9, 15.6-inch display and 512GB SSD. Choose from green and rose gold.",
+    "output": "{\"product_name\": \"UltraBook Ultra\", \"brand\": \"HP\", \"price\": \"$1458\", \"features\": [\"M2 chip\", \"Intel i9\", \"15.6-inch display\", \"512GB SSD\"], \"colors\": [\"green\", \"rose gold\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Dell's RapidType Neo keyboard ($245) offers PBT keycaps, TKL layout, ergonomic design, compact 65% and RGB backlight. Choose from black and space gray.",
+    "output": "{\"product_name\": \"RapidType Neo\", \"brand\": \"Dell\", \"price\": \"$245\", \"features\": [\"PBT keycaps\", \"TKL layout\", \"ergonomic design\", \"compact 65%\", \"RGB backlight\"], \"colors\": [\"black\", \"space gray\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Brian Russo works as a Engineering Manager. With 8 years of professional experience, they specialize in Agile and Scikit-learn. Education: Bachelor's in Information Technology from Cambridge.",
+    "output": "{\"name\": \"Brian Russo\", \"role\": \"Engineering Manager\", \"experience\": \"8 years\", \"skills\": [\"Agile\", \"Scikit-learn\"], \"education\": \"Bachelor's in Information Technology from Cambridge\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "As a backend developer, Rebecca Tanaka brings 2 years of hands-on experience in CI/CD, System Design and Scrum. Academic credentials: Master's in Engineering from Oxford.",
+    "output": "{\"name\": \"Rebecca Tanaka\", \"role\": \"Backend Developer\", \"experience\": \"2 years\", \"skills\": [\"CI/CD\", \"System Design\", \"Scrum\"], \"education\": \"Master's in Engineering from Oxford\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Christopher Khan | Driving AI ethics, brand strategy and team building at Apple as Scrum Master. 6 years track record. Prior: Stripe, Snowflake. MBA from Princeton.",
+    "output": "{\"name\": \"Christopher Khan\", \"role\": \"Scrum Master\", \"company\": \"Apple\", \"previous_companies\": [\"Stripe\", \"Snowflake\"], \"experience\": \"6 years\", \"skills\": [\"AI ethics\", \"brand strategy\", \"team building\"], \"education\": \"MBA from Princeton\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Nina Martinez | Engineering Manager at Oracle with 3 years of experience. Background in blockchain and brand strategy. Alumni of Cornell. Previously worked at Elastic.",
+    "output": "{\"name\": \"Nina Martinez\", \"role\": \"Engineering Manager\", \"company\": \"Oracle\", \"previous_companies\": [\"Elastic\"], \"experience\": \"3 years\", \"skills\": [\"blockchain\", \"brand strategy\"], \"education\": \"BS from Cornell\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Product: MechPro V2 | Brand: CoreTech | Type: keyboard | Price: $69 | Features: USB-C charging, PBT keycaps, aluminum frame, compact 65%, mechanical switches | Colors: black, red, rose gold and purple",
+    "output": "{\"product_name\": \"MechPro V2\", \"brand\": \"CoreTech\", \"price\": \"$69\", \"features\": [\"USB-C charging\", \"PBT keycaps\", \"aluminum frame\", \"compact 65%\", \"mechanical switches\"], \"colors\": [\"black\", \"red\", \"rose gold\", \"purple\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Asus releases the UltraSharp Plus, a monitor priced at $715 with 165Hz refresh rate, HDR10, 144Hz refresh rate and 27-inch 4K. Available colors include midnight blue, white, purple and rose gold.",
+    "output": "{\"product_name\": \"UltraSharp Plus\", \"brand\": \"Asus\", \"price\": \"$715\", \"features\": [\"165Hz refresh rate\", \"HDR10\", \"144Hz refresh rate\", \"27-inch 4K\"], \"colors\": [\"midnight blue\", \"white\", \"purple\", \"rose gold\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Meet Jennifer Moore, a data engineer who has been in the industry for 4 years. Their expertise includes JavaScript, GCP, Scikit-learn and Elasticsearch.",
+    "output": "{\"name\": \"Jennifer Moore\", \"role\": \"Data Engineer\", \"experience\": \"4 years\", \"skills\": [\"JavaScript\", \"GCP\", \"Scikit-learn\", \"Elasticsearch\"], \"education\": null}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Jessica Kim | Driving Django, open source, fintech and sustainability at Elastic as Security Engineer. 6 years track record. Prior: DataFlow Inc. MS from UT Austin.",
+    "output": "{\"name\": \"Jessica Kim\", \"role\": \"Security Engineer\", \"company\": \"Elastic\", \"previous_companies\": [\"DataFlow Inc\"], \"experience\": \"6 years\", \"skills\": [\"Django\", \"open source\", \"fintech\", \"sustainability\"], \"education\": \"MS from UT Austin\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "JBL's Moto Elite phone ($1132) offers 4500mAh battery, water resistant and 128GB storage. Choose from black, starlight, rose gold and navy.",
+    "output": "{\"product_name\": \"Moto Elite\", \"brand\": \"JBL\", \"price\": \"$1132\", \"features\": [\"4500mAh battery\", \"water resistant\", \"128GB storage\"], \"colors\": [\"black\", \"starlight\", \"rose gold\", \"navy\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Ava Miller is a software engineer with 10 years of experience. Skilled in Scikit-learn, Scrum and Terraform. Holds a Master's in AI from IIT Bombay.",
+    "output": "{\"name\": \"Ava Miller\", \"role\": \"Software Engineer\", \"experience\": \"10 years\", \"skills\": [\"Scikit-learn\", \"Scrum\", \"Terraform\"], \"education\": \"Master's in AI from IIT Bombay\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Aiden Young | Platform Engineer | LinkedIn | 5+ years experience | Skills: system design, growth hacking | Previously: Microsoft, Snap | MS from Cambridge",
+    "output": "{\"name\": \"Aiden Young\", \"role\": \"Platform Engineer\", \"company\": \"LinkedIn\", \"previous_companies\": [\"Microsoft\", \"Snap\"], \"experience\": \"5+ years\", \"skills\": [\"system design\", \"growth hacking\"], \"education\": \"MS from Cambridge\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "As a software engineer, Aaliya Costa brings 10 years of hands-on experience in REST APIs, React, Java and Git. Academic credentials: Master's in Engineering from Princeton.",
+    "output": "{\"name\": \"Aaliya Costa\", \"role\": \"Software Engineer\", \"experience\": \"10 years\", \"skills\": [\"REST APIs\", \"React\", \"Java\", \"Git\"], \"education\": \"Master's in Engineering from Princeton\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Viktor Thomas works as a Senior Data Engineer. With 4 years of professional experience, they specialize in NumPy and SQL. Education: Bachelor's in Electrical Engineering from NUS.",
+    "output": "{\"name\": \"Viktor Thomas\", \"role\": \"Senior Data Engineer\", \"experience\": \"4 years\", \"skills\": [\"NumPy\", \"SQL\"], \"education\": \"Bachelor's in Electrical Engineering from NUS\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Thomas Russo is a product manager specializing in PostgreSQL, REST APIs and Scrum. Graduated with a Master's in Data Science from Princeton.",
+    "output": "{\"name\": \"Thomas Russo\", \"role\": \"Product Manager\", \"experience\": null, \"skills\": [\"PostgreSQL\", \"REST APIs\", \"Scrum\"], \"education\": \"Master's in Data Science from Princeton\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Sven Thomas | Tech Lead at CloudBase with 7+ years of experience. Background in growth hacking and technical writing. Alumni of Columbia. Previously worked at MongoDB Inc.",
+    "output": "{\"name\": \"Sven Thomas\", \"role\": \"Tech Lead\", \"company\": \"CloudBase\", \"previous_companies\": [\"MongoDB Inc\"], \"experience\": \"7+ years\", \"skills\": [\"growth hacking\", \"technical writing\"], \"education\": \"MBA from Columbia\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Jennifer White | Product Manager | Tesla | 6 years experience | Skills: Node.js, digital marketing | Previously: Palantir, McKinsey | PhD from Columbia",
+    "output": "{\"name\": \"Jennifer White\", \"role\": \"Product Manager\", \"company\": \"Tesla\", \"previous_companies\": [\"Palantir\", \"McKinsey\"], \"experience\": \"6 years\", \"skills\": [\"Node.js\", \"digital marketing\"], \"education\": \"PhD from Columbia\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Anker Surface SE is a premium tablet available for $1026. Key specs: quad speakers, M1 chip, fingerprint unlock, 128GB storage, 12.9-inch display. Colors: purple, graphite and navy.",
+    "output": "{\"product_name\": \"Surface SE\", \"brand\": \"Anker\", \"price\": \"$1026\", \"features\": [\"quad speakers\", \"M1 chip\", \"fingerprint unlock\", \"128GB storage\", \"12.9-inch display\"], \"colors\": [\"purple\", \"graphite\", \"navy\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Sophia Williams works as a Data Scientist. With 6 years of professional experience, they specialize in Vue.js and JIRA. Education: Bachelor's in Information Technology from University of Michigan.",
+    "output": "{\"name\": \"Sophia Williams\", \"role\": \"Data Scientist\", \"experience\": \"6 years\", \"skills\": [\"Vue.js\", \"JIRA\"], \"education\": \"Bachelor's in Information Technology from University of Michigan\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Diego Thompson works as a Data Scientist. With 1 year of professional experience, they specialize in REST APIs, Python and MongoDB. Education: Master's in Applied Mathematics from UIUC.",
+    "output": "{\"name\": \"Diego Thompson\", \"role\": \"Data Scientist\", \"experience\": \"1 year\", \"skills\": [\"REST APIs\", \"Python\", \"MongoDB\"], \"education\": \"Master's in Applied Mathematics from UIUC\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Experienced frontend developer Diego Ivanov has spent 5 years working with React, JIRA, Machine Learning, Docker and MySQL. Educational background includes a Master's in Engineering from UC Berkeley.",
+    "output": "{\"name\": \"Diego Ivanov\", \"role\": \"Frontend Developer\", \"experience\": \"5 years\", \"skills\": [\"React\", \"JIRA\", \"Machine Learning\", \"Docker\", \"MySQL\"], \"education\": \"Master's in Engineering from UC Berkeley\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Robert Mitchell has 5+ years of experience as a frontend developer. Technical skills include React, AWS, Rust, Linux and PyTorch. Graduated with a MBA from Stanford.",
+    "output": "{\"name\": \"Robert Mitchell\", \"role\": \"Frontend Developer\", \"experience\": \"5+ years\", \"skills\": [\"React\", \"AWS\", \"Rust\", \"Linux\", \"PyTorch\"], \"education\": \"MBA from Stanford\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Thomas Jackson is a senior data engineer specializing in SQL, Redis, Go and Kubernetes. Graduated with a Master's in Engineering from Carnegie Mellon.",
+    "output": "{\"name\": \"Thomas Jackson\", \"role\": \"Senior Data Engineer\", \"experience\": null, \"skills\": [\"SQL\", \"Redis\", \"Go\", \"Kubernetes\"], \"education\": \"Master's in Engineering from Carnegie Mellon\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Xperia Plus (EliteTech) is a top-rated phone. For $640, you get 4500mAh battery, Face ID and 108MP camera. It comes in black and graphite.",
+    "output": "{\"product_name\": \"Xperia Plus\", \"brand\": \"EliteTech\", \"price\": \"$640\", \"features\": [\"4500mAh battery\", \"Face ID\", \"108MP camera\"], \"colors\": [\"black\", \"graphite\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Yuki Fischer | Driving healthtech, fintech and sustainability at Snowflake as Data Analyst. 15 years track record. Prior: InnovateTech. MBA from Cornell.",
+    "output": "{\"name\": \"Yuki Fischer\", \"role\": \"Data Analyst\", \"company\": \"Snowflake\", \"previous_companies\": [\"InnovateTech\"], \"experience\": \"15 years\", \"skills\": [\"healthtech\", \"fintech\", \"sustainability\"], \"education\": \"MBA from Cornell\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Mei Singh | Data Scientist @ Google. Previously at Oracle. 1 year of experience in team building, system design, AI ethics and Terraform. PhD from Cambridge.",
+    "output": "{\"name\": \"Mei Singh\", \"role\": \"Data Scientist\", \"company\": \"Google\", \"previous_companies\": [\"Oracle\"], \"experience\": \"1 year\", \"skills\": [\"team building\", \"system design\", \"AI ethics\", \"Terraform\"], \"education\": \"PhD from Cambridge\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Experienced devops engineer Sam Brown has spent 7+ years working with SQL and NLP. Educational background includes a Bachelor's in Engineering from Cornell.",
+    "output": "{\"name\": \"Sam Brown\", \"role\": \"DevOps Engineer\", \"experience\": \"7+ years\", \"skills\": [\"SQL\", \"NLP\"], \"education\": \"Bachelor's in Engineering from Cornell\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Data Scientist at Airbnb | Ex-SAP | PhD from Tsinghua University | Passionate about technical writing, open source and Linux | 6 years in the industry",
+    "output": "{\"name\": null, \"role\": \"Data Scientist\", \"company\": \"Airbnb\", \"previous_companies\": [\"SAP\"], \"experience\": \"6 years\", \"skills\": [\"technical writing\", \"open source\", \"Linux\"], \"education\": \"PhD from Tsinghua University\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Steven Ali works as a DevOps Engineer. With 3 years of professional experience, they specialize in GraphQL, TypeScript, NLP, Data Analysis and Computer Vision. Education: Bachelor's in Mathematics from UC Berkeley.",
+    "output": "{\"name\": \"Steven Ali\", \"role\": \"DevOps Engineer\", \"experience\": \"3 years\", \"skills\": [\"GraphQL\", \"TypeScript\", \"NLP\", \"Data Analysis\", \"Computer Vision\"], \"education\": \"Bachelor's in Mathematics from UC Berkeley\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "With 10 years in the field, Viktor Hill serves as a Backend Developer. Core competencies: GraphQL, Kubernetes and JIRA. Educational qualification: Bachelor's in Electrical Engineering from Carnegie Mellon.",
+    "output": "{\"name\": \"Viktor Hill\", \"role\": \"Backend Developer\", \"experience\": \"10 years\", \"skills\": [\"GraphQL\", \"Kubernetes\", \"JIRA\"], \"education\": \"Bachelor's in Electrical Engineering from Carnegie Mellon\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Stephanie Miller | Site Reliability Engineer at Pinterest | Ex-IBM | MS from University of Michigan | Passionate about brand strategy, blockchain, distributed systems and public speaking | 2+ years in the industry",
+    "output": "{\"name\": \"Stephanie Miller\", \"role\": \"Site Reliability Engineer\", \"company\": \"Pinterest\", \"previous_companies\": [\"IBM\"], \"experience\": \"2+ years\", \"skills\": [\"brand strategy\", \"blockchain\", \"distributed systems\", \"public speaking\"], \"education\": \"MS from University of Michigan\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Sam Jackson | Solutions Architect @ BCG. Previously at Elastic, Oracle. 7 years of experience in AI ethics, distributed systems, product innovation and public speaking. MBA from IIT Delhi.",
+    "output": "{\"name\": \"Sam Jackson\", \"role\": \"Solutions Architect\", \"company\": \"BCG\", \"previous_companies\": [\"Elastic\", \"Oracle\"], \"experience\": \"7 years\", \"skills\": [\"AI ethics\", \"distributed systems\", \"product innovation\", \"public speaking\"], \"education\": \"MBA from IIT Delhi\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Viktor Anderson works as a Software Engineer. With 10 years of professional experience, they specialize in Elasticsearch, SQL and System Design. Education: Master's in Engineering from NUS.",
+    "output": "{\"name\": \"Viktor Anderson\", \"role\": \"Software Engineer\", \"experience\": \"10 years\", \"skills\": [\"Elasticsearch\", \"SQL\", \"System Design\"], \"education\": \"Master's in Engineering from NUS\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Driving Django and AI ethics at Deloitte as DevOps Engineer. 4 years track record. Prior: Snap, Amazon. PhD from Harvard.",
+    "output": "{\"name\": null, \"role\": \"DevOps Engineer\", \"company\": \"Deloitte\", \"previous_companies\": [\"Snap\", \"Amazon\"], \"experience\": \"4 years\", \"skills\": [\"Django\", \"AI ethics\"], \"education\": \"PhD from Harvard\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Cynthia Ramirez | iOS Developer at Snowflake with 12 years of experience. Background in public speaking, edtech, cloud architecture and AI ethics. Alumni of IIT Delhi. Previously worked at Deloitte.",
+    "output": "{\"name\": \"Cynthia Ramirez\", \"role\": \"iOS Developer\", \"company\": \"Snowflake\", \"previous_companies\": [\"Deloitte\"], \"experience\": \"12 years\", \"skills\": [\"public speaking\", \"edtech\", \"cloud architecture\", \"AI ethics\"], \"education\": \"MS from IIT Delhi\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Backend Developer @ Apple. Previously at LinkedIn. 3 years of experience in AI ethics and developer experience. MS from Georgia Tech.",
+    "output": "{\"name\": null, \"role\": \"Backend Developer\", \"company\": \"Apple\", \"previous_companies\": [\"LinkedIn\"], \"experience\": \"3 years\", \"skills\": [\"AI ethics\", \"developer experience\"], \"education\": \"MS from Georgia Tech\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The SoundMax Z (Belkin) is a top-rated headphone. For $426, you get IPX4 water resistant, Hi-Res Audio and noise cancelling. It comes in white and black.",
+    "output": "{\"product_name\": \"SoundMax Z\", \"brand\": \"Belkin\", \"price\": \"$426\", \"features\": [\"IPX4 water resistant\", \"Hi-Res Audio\", \"noise cancelling\"], \"colors\": [\"white\", \"black\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Deborah Kim is currently working as a Senior Data Engineer. Over the past 3+ years, they have developed expertise in MongoDB and JIRA. They hold a Master's in Data Science from Cambridge.",
+    "output": "{\"name\": \"Deborah Kim\", \"role\": \"Senior Data Engineer\", \"experience\": \"3+ years\", \"skills\": [\"MongoDB\", \"JIRA\"], \"education\": \"Master's in Data Science from Cambridge\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Mia Nelson | DevOps Engineer @ Netflix. Previously at Adobe. 7+ years of experience in brand strategy, public speaking and mentoring. PhD from Harvard.",
+    "output": "{\"name\": \"Mia Nelson\", \"role\": \"DevOps Engineer\", \"company\": \"Netflix\", \"previous_companies\": [\"Adobe\"], \"experience\": \"7+ years\", \"skills\": [\"brand strategy\", \"public speaking\", \"mentoring\"], \"education\": \"PhD from Harvard\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Experienced data engineer Clara Martin has spent 5+ years working with PostgreSQL, Angular, JIRA and REST APIs. Educational background includes a Master's in AI from University of Toronto.",
+    "output": "{\"name\": \"Clara Martin\", \"role\": \"Data Engineer\", \"experience\": \"5+ years\", \"skills\": [\"PostgreSQL\", \"Angular\", \"JIRA\", \"REST APIs\"], \"education\": \"Master's in AI from University of Toronto\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Currently Tech Lead at Deloitte. Former Apple, SAP. Focused on mentoring, Microservices and product innovation. Education: BS from University of Washington. 1 year experience.",
+    "output": "{\"name\": null, \"role\": \"Tech Lead\", \"company\": \"Deloitte\", \"previous_companies\": [\"Apple\", \"SAP\"], \"experience\": \"1 year\", \"skills\": [\"mentoring\", \"Microservices\", \"product innovation\"], \"education\": \"BS from University of Washington\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Professional profile: Sam Baker is an experienced ml engineer (12 years) proficient in Kubernetes, MySQL, Deep Learning and Apache Spark. Academic background: Bachelor's in Engineering from Cambridge.",
+    "output": "{\"name\": \"Sam Baker\", \"role\": \"ML Engineer\", \"experience\": \"12 years\", \"skills\": [\"Kubernetes\", \"MySQL\", \"Deep Learning\", \"Apache Spark\"], \"education\": \"Bachelor's in Engineering from Cambridge\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Product: ViewFine Pro | Brand: Asus | Type: monitor | Price: $328 | Features: 27-inch 4K, OLED panel, 34-inch ultrawide, 165Hz refresh rate, built-in speakers | Colors: white and red",
+    "output": "{\"product_name\": \"ViewFine Pro\", \"brand\": \"Asus\", \"price\": \"$328\", \"features\": [\"27-inch 4K\", \"OLED panel\", \"34-inch ultrawide\", \"165Hz refresh rate\", \"built-in speakers\"], \"colors\": [\"white\", \"red\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Frontend Developer | Deloitte | 5+ years experience | Skills: product innovation, data-driven decisions, cloud architecture, team building | Previously: Adobe | MBA from Carnegie Mellon",
+    "output": "{\"name\": null, \"role\": \"Frontend Developer\", \"company\": \"Deloitte\", \"previous_companies\": [\"Adobe\"], \"experience\": \"5+ years\", \"skills\": [\"product innovation\", \"data-driven decisions\", \"cloud architecture\", \"team building\"], \"education\": \"MBA from Carnegie Mellon\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Senior Software Engineer | Palantir | 4 years experience | Skills: team building, system design, product innovation, Data Analysis | Previously: Netflix | MBA from UT Austin",
+    "output": "{\"name\": null, \"role\": \"Senior Software Engineer\", \"company\": \"Palantir\", \"previous_companies\": [\"Netflix\"], \"experience\": \"4 years\", \"skills\": [\"team building\", \"system design\", \"product innovation\", \"Data Analysis\"], \"education\": \"MBA from UT Austin\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "As a data engineer, Vera Walker brings 12 years of hands-on experience in MySQL, NoSQL and JavaScript. Academic credentials: Master's in Computer Science from University of Michigan.",
+    "output": "{\"name\": \"Vera Walker\", \"role\": \"Data Engineer\", \"experience\": \"12 years\", \"skills\": [\"MySQL\", \"NoSQL\", \"JavaScript\"], \"education\": \"Master's in Computer Science from University of Michigan\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Looking for a new headphone? The AirPods Pro by CoreTech features Hi-Res Audio, foldable design, spatial audio and Bluetooth 5.0 and is available in red, silver and space gray. Retail price: $310.",
+    "output": "{\"product_name\": \"AirPods Pro\", \"brand\": \"CoreTech\", \"price\": \"$310\", \"features\": [\"Hi-Res Audio\", \"foldable design\", \"spatial audio\", \"Bluetooth 5.0\"], \"colors\": [\"red\", \"silver\", \"space gray\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Patricia Carter is currently working as a Data Engineer. Over the past 3+ years, they have developed expertise in Spring Boot, Redis and PostgreSQL. They hold a PhD in Computer Science from Cornell.",
+    "output": "{\"name\": \"Patricia Carter\", \"role\": \"Data Engineer\", \"experience\": \"3+ years\", \"skills\": [\"Spring Boot\", \"Redis\", \"PostgreSQL\"], \"education\": \"PhD in Computer Science from Cornell\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Kenji Ferreira | ML Engineer at Microsoft with 7 years of experience. Background in MongoDB and public speaking. Alumni of NUS. Previously worked at Intel, Salesforce.",
+    "output": "{\"name\": \"Kenji Ferreira\", \"role\": \"ML Engineer\", \"company\": \"Microsoft\", \"previous_companies\": [\"Intel\", \"Salesforce\"], \"experience\": \"7 years\", \"skills\": [\"MongoDB\", \"public speaking\"], \"education\": \"BS from NUS\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Product: RapidType Air | Brand: NovaTech | Type: keyboard | Price: $243 | Features: N-key rollover, full-size, RGB backlight, aluminum frame, Bluetooth | Colors: white, silver and graphite",
+    "output": "{\"product_name\": \"RapidType Air\", \"brand\": \"NovaTech\", \"price\": \"$243\", \"features\": [\"N-key rollover\", \"full-size\", \"RGB backlight\", \"aluminum frame\", \"Bluetooth\"], \"colors\": [\"white\", \"silver\", \"graphite\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Deborah Ali | Currently Security Engineer at Twitter. Former NexGen Solutions, Tesla. Focused on product innovation and edtech. Education: MS from University of Michigan. 3+ years experience.",
+    "output": "{\"name\": \"Deborah Ali\", \"role\": \"Security Engineer\", \"company\": \"Twitter\", \"previous_companies\": [\"NexGen Solutions\", \"Tesla\"], \"experience\": \"3+ years\", \"skills\": [\"product innovation\", \"edtech\"], \"education\": \"MS from University of Michigan\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "John Patel is a full stack developer with 1 year of experience. Skilled in NumPy and System Design. Holds a Master's in Applied Mathematics from University of Washington.",
+    "output": "{\"name\": \"John Patel\", \"role\": \"Full Stack Developer\", \"experience\": \"1 year\", \"skills\": [\"NumPy\", \"System Design\"], \"education\": \"Master's in Applied Mathematics from University of Washington\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Leila Ferreira is a frontend developer specializing in Docker, C++ and React. Graduated with a Master's in Applied Mathematics from NUS.",
+    "output": "{\"name\": \"Leila Ferreira\", \"role\": \"Frontend Developer\", \"experience\": null, \"skills\": [\"Docker\", \"C++\", \"React\"], \"education\": \"Master's in Applied Mathematics from NUS\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Xperia Z is a phone by Dell priced at $902. It features 128GB storage, 5G connectivity, 48MP camera and wireless charging. Available in rose gold, red and starlight.",
+    "output": "{\"product_name\": \"Xperia Z\", \"brand\": \"Dell\", \"price\": \"$902\", \"features\": [\"128GB storage\", \"5G connectivity\", \"48MP camera\", \"wireless charging\"], \"colors\": [\"rose gold\", \"red\", \"starlight\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Paul Hill | Platform Engineer | 10 years experience | Skills: GraphQL, NumPy, SQL | PhD in Computer Science from MIT",
+    "output": "{\"name\": \"Paul Hill\", \"role\": \"Platform Engineer\", \"experience\": \"10 years\", \"skills\": [\"GraphQL\", \"NumPy\", \"SQL\"], \"education\": \"PhD in Computer Science from MIT\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Jason Miller | Driving system design, public speaking, MongoDB and data-driven decisions at Shopify as Android Developer. 7 years track record. Prior: Airbnb. MBA from UC Berkeley.",
+    "output": "{\"name\": \"Jason Miller\", \"role\": \"Android Developer\", \"company\": \"Shopify\", \"previous_companies\": [\"Airbnb\"], \"experience\": \"7 years\", \"skills\": [\"system design\", \"public speaking\", \"MongoDB\", \"data-driven decisions\"], \"education\": \"MBA from UC Berkeley\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Melissa Patel is a platform engineer with 1 year of experience. Skilled in MySQL, FastAPI and Linux. Holds a Master's in Applied Mathematics from University of Toronto.",
+    "output": "{\"name\": \"Melissa Patel\", \"role\": \"Platform Engineer\", \"experience\": \"1 year\", \"skills\": [\"MySQL\", \"FastAPI\", \"Linux\"], \"education\": \"Master's in Applied Mathematics from University of Toronto\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Karen Nguyen | Currently Senior Data Scientist at Confluent. Former Adobe, Tesla. Focused on open source and digital marketing. Education: MBA from ETH Zurich. 3+ years experience.",
+    "output": "{\"name\": \"Karen Nguyen\", \"role\": \"Senior Data Scientist\", \"company\": \"Confluent\", \"previous_companies\": [\"Adobe\", \"Tesla\"], \"experience\": \"3+ years\", \"skills\": [\"open source\", \"digital marketing\"], \"education\": \"MBA from ETH Zurich\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Meet Max Ramirez, a security engineer who has been in the industry for 2 years. Their expertise includes FastAPI, C++ and Ruby. They completed their PhD in Computer Science from Harvard.",
+    "output": "{\"name\": \"Max Ramirez\", \"role\": \"Security Engineer\", \"experience\": \"2 years\", \"skills\": [\"FastAPI\", \"C++\", \"Ruby\"], \"education\": \"PhD in Computer Science from Harvard\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Lisa Ivanov has 5 years of experience as a devops engineer. Technical skills include Flask, Terraform and Scikit-learn. Graduated with a Master's in Computer Science from UIUC.",
+    "output": "{\"name\": \"Lisa Ivanov\", \"role\": \"DevOps Engineer\", \"experience\": \"5 years\", \"skills\": [\"Flask\", \"Terraform\", \"Scikit-learn\"], \"education\": \"Master's in Computer Science from UIUC\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Jeffrey Brown works as a ML Engineer. With 15 years of professional experience, they specialize in Git, System Design, React, Vue.js and MongoDB. Education: Master's in Engineering from Columbia.",
+    "output": "{\"name\": \"Jeffrey Brown\", \"role\": \"ML Engineer\", \"experience\": \"15 years\", \"skills\": [\"Git\", \"System Design\", \"React\", \"Vue.js\", \"MongoDB\"], \"education\": \"Master's in Engineering from Columbia\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Introducing the Galaxy Tab Pro from EliteTech. This tablet comes with keyboard compatible, 12.9-inch display and 10-hour battery at just $1472. Color options: navy and green.",
+    "output": "{\"product_name\": \"Galaxy Tab Pro\", \"brand\": \"EliteTech\", \"price\": \"$1472\", \"features\": [\"keyboard compatible\", \"12.9-inch display\", \"10-hour battery\"], \"colors\": [\"navy\", \"green\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Pixel Z is a phone by CoreTech priced at $400. It features 6.5-inch AMOLED, 4500mAh battery and 128GB storage. Available in graphite and red.",
+    "output": "{\"product_name\": \"Pixel Z\", \"brand\": \"CoreTech\", \"price\": \"$400\", \"features\": [\"6.5-inch AMOLED\", \"4500mAh battery\", \"128GB storage\"], \"colors\": [\"graphite\", \"red\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Leila Baker is a ai researcher with 2 years of experience. Skilled in Go and TypeScript. Holds a PhD in Computer Science from IIT Bombay.",
+    "output": "{\"name\": \"Leila Baker\", \"role\": \"AI Researcher\", \"experience\": \"2 years\", \"skills\": [\"Go\", \"TypeScript\"], \"education\": \"PhD in Computer Science from IIT Bombay\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Meet Joseph Mueller, a senior software engineer who has been in the industry for 5+ years. Their expertise includes GraphQL, TensorFlow, Deep Learning and CI/CD. They completed their Master's in Applied Mathematics from UC Berkeley.",
+    "output": "{\"name\": \"Joseph Mueller\", \"role\": \"Senior Software Engineer\", \"experience\": \"5+ years\", \"skills\": [\"GraphQL\", \"TensorFlow\", \"Deep Learning\", \"CI/CD\"], \"education\": \"Master's in Applied Mathematics from UC Berkeley\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Anker Tab SE is a premium tablet available for $643. Key specs: 12.9-inch display, 128GB storage, Snapdragon 8 Gen 2. Colors: starlight, midnight blue, red and rose gold.",
+    "output": "{\"product_name\": \"Tab SE\", \"brand\": \"Anker\", \"price\": \"$643\", \"features\": [\"12.9-inch display\", \"128GB storage\", \"Snapdragon 8 Gen 2\"], \"colors\": [\"starlight\", \"midnight blue\", \"red\", \"rose gold\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Anker MatePad SE is a premium tablet available for $665. Key specs: M1 chip, keyboard compatible, Face ID. Colors: navy and rose gold.",
+    "output": "{\"product_name\": \"MatePad SE\", \"brand\": \"Anker\", \"price\": \"$665\", \"features\": [\"M1 chip\", \"keyboard compatible\", \"Face ID\"], \"colors\": [\"navy\", \"rose gold\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Aisha Smith is a staff engineer with 7+ years of experience. Skilled in MySQL and Java. Holds a Bachelor's in Mathematics from Caltech.",
+    "output": "{\"name\": \"Aisha Smith\", \"role\": \"Staff Engineer\", \"experience\": \"7+ years\", \"skills\": [\"MySQL\", \"Java\"], \"education\": \"Bachelor's in Mathematics from Caltech\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Staff Engineer at Confluent | Ex-Dropbox | MBA from MIT | Passionate about growth hacking, brand strategy and MongoDB | 5+ years in the industry",
+    "output": "{\"name\": null, \"role\": \"Staff Engineer\", \"company\": \"Confluent\", \"previous_companies\": [\"Dropbox\"], \"experience\": \"5+ years\", \"skills\": [\"growth hacking\", \"brand strategy\", \"MongoDB\"], \"education\": \"MBA from MIT\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Laura Kim is a staff engineer with 4 years of experience. Skilled in NumPy, PyTorch, JavaScript, Apache Spark and NLP. Holds a Master's in AI from Tsinghua University.",
+    "output": "{\"name\": \"Laura Kim\", \"role\": \"Staff Engineer\", \"experience\": \"4 years\", \"skills\": [\"NumPy\", \"PyTorch\", \"JavaScript\", \"Apache Spark\", \"NLP\"], \"education\": \"Master's in AI from Tsinghua University\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "With 2+ years in the field, Ava Torres serves as a Staff Engineer. Core competencies: Agile, TensorFlow, Vue.js, Scikit-learn and Linux. Educational qualification: Master's in Engineering from Harvard.",
+    "output": "{\"name\": \"Ava Torres\", \"role\": \"Staff Engineer\", \"experience\": \"2+ years\", \"skills\": [\"Agile\", \"TensorFlow\", \"Vue.js\", \"Scikit-learn\", \"Linux\"], \"education\": \"Master's in Engineering from Harvard\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Arjun Gonzalez is currently working as a ML Engineer. Over the past 7+ years, they have developed expertise in JIRA and PyTorch. They hold a Master's in Engineering from Carnegie Mellon.",
+    "output": "{\"name\": \"Arjun Gonzalez\", \"role\": \"ML Engineer\", \"experience\": \"7+ years\", \"skills\": [\"JIRA\", \"PyTorch\"], \"education\": \"Master's in Engineering from Carnegie Mellon\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Experienced ai researcher Kevin Ali has spent 1 year working with FastAPI, Linux, Ruby and Docker. Educational background includes a PhD in Machine Learning from Tsinghua University.",
+    "output": "{\"name\": \"Kevin Ali\", \"role\": \"AI Researcher\", \"experience\": \"1 year\", \"skills\": [\"FastAPI\", \"Linux\", \"Ruby\", \"Docker\"], \"education\": \"PhD in Machine Learning from Tsinghua University\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Product: UltraBook SE | Brand: Asus | Type: laptop | Price: $1582 | Features: fingerprint reader, Intel i7, 15.6-inch display, 32GB RAM, 8GB RAM | Colors: navy, red and rose gold",
+    "output": "{\"product_name\": \"UltraBook SE\", \"brand\": \"Asus\", \"price\": \"$1582\", \"features\": [\"fingerprint reader\", \"Intel i7\", \"15.6-inch display\", \"32GB RAM\", \"8GB RAM\"], \"colors\": [\"navy\", \"red\", \"rose gold\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The TechCorp Galaxy S is a premium phone available for $722. Key specs: Face ID, 108MP camera, 6.5-inch AMOLED, 4500mAh battery, 5000mAh battery. Colors: space gray, white and green.",
+    "output": "{\"product_name\": \"Galaxy S\", \"brand\": \"TechCorp\", \"price\": \"$722\", \"features\": [\"Face ID\", \"108MP camera\", \"6.5-inch AMOLED\", \"4500mAh battery\", \"5000mAh battery\"], \"colors\": [\"space gray\", \"white\", \"green\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Meet Nina Ferreira, a senior data engineer who has been in the industry for 1 year. Their expertise includes Machine Learning, Python, Spring Boot, Django and Agile. They completed their Bachelor's in Electrical Engineering from UCLA.",
+    "output": "{\"name\": \"Nina Ferreira\", \"role\": \"Senior Data Engineer\", \"experience\": \"1 year\", \"skills\": [\"Machine Learning\", \"Python\", \"Spring Boot\", \"Django\", \"Agile\"], \"education\": \"Bachelor's in Electrical Engineering from UCLA\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Razer's SwiftBook V2 laptop ($862) offers Intel i9, 8GB RAM, 512GB SSD, fingerprint reader and 256GB SSD. Choose from silver, white and red.",
+    "output": "{\"product_name\": \"SwiftBook V2\", \"brand\": \"Razer\", \"price\": \"$862\", \"features\": [\"Intel i9\", \"8GB RAM\", \"512GB SSD\", \"fingerprint reader\", \"256GB SSD\"], \"colors\": [\"silver\", \"white\", \"red\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Sarah Harris is a qa engineer with 2+ years of experience. Skilled in Docker, NoSQL, Node.js and Git.",
+    "output": "{\"name\": \"Sarah Harris\", \"role\": \"QA Engineer\", \"experience\": \"2+ years\", \"skills\": [\"Docker\", \"NoSQL\", \"Node.js\", \"Git\"], \"education\": null}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Asus's SilentKey SE keyboard ($87) offers PBT keycaps, TKL layout, USB-C charging, compact 65% and RGB backlight. Choose from navy, midnight blue and red.",
+    "output": "{\"product_name\": \"SilentKey SE\", \"brand\": \"Asus\", \"price\": \"$87\", \"features\": [\"PBT keycaps\", \"TKL layout\", \"USB-C charging\", \"compact 65%\", \"RGB backlight\"], \"colors\": [\"navy\", \"midnight blue\", \"red\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The AirBook Lite (Dell) is a top-rated laptop. For $1669, you get Wi-Fi 6E, M3 chip, 256GB SSD and 1TB SSD. It comes in red, graphite and space gray.",
+    "output": "{\"product_name\": \"AirBook Lite\", \"brand\": \"Dell\", \"price\": \"$1669\", \"features\": [\"Wi-Fi 6E\", \"M3 chip\", \"256GB SSD\", \"1TB SSD\"], \"colors\": [\"red\", \"graphite\", \"space gray\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Product: OnePlus SE | Brand: Razer | Type: phone | Price: $1327 | Features: 50MP camera, 48MP camera, under-display fingerprint, fast charging | Colors: midnight blue and graphite",
+    "output": "{\"product_name\": \"OnePlus SE\", \"brand\": \"Razer\", \"price\": \"$1327\", \"features\": [\"50MP camera\", \"48MP camera\", \"under-display fingerprint\", \"fast charging\"], \"colors\": [\"midnight blue\", \"graphite\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Patricia Lopez | Backend Developer | 1 year experience | Skills: Data Analysis, TypeScript, Agile, PostgreSQL | Master's in Applied Mathematics from Oxford",
+    "output": "{\"name\": \"Patricia Lopez\", \"role\": \"Backend Developer\", \"experience\": \"1 year\", \"skills\": [\"Data Analysis\", \"TypeScript\", \"Agile\", \"PostgreSQL\"], \"education\": \"Master's in Applied Mathematics from Oxford\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Andrew Robinson is a senior software engineer with 4 years of experience. Skilled in FastAPI, GraphQL, Machine Learning, Rust and Linux. Holds a Bachelor's in Mathematics from MIT.",
+    "output": "{\"name\": \"Andrew Robinson\", \"role\": \"Senior Software Engineer\", \"experience\": \"4 years\", \"skills\": [\"FastAPI\", \"GraphQL\", \"Machine Learning\", \"Rust\", \"Linux\"], \"education\": \"Bachelor's in Mathematics from MIT\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Leila Harris, DevOps Engineer | Skills: Apache Spark, REST APIs | Education: MBA from University of Toronto",
+    "output": "{\"name\": \"Leila Harris\", \"role\": \"DevOps Engineer\", \"experience\": null, \"skills\": [\"Apache Spark\", \"REST APIs\"], \"education\": \"MBA from University of Toronto\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The EliteTech BassPro Plus is a premium headphone available for $260. Key specs: 40-hour battery, spatial audio, Hi-Res Audio, built-in microphone. Colors: red and gold.",
+    "output": "{\"product_name\": \"BassPro Plus\", \"brand\": \"EliteTech\", \"price\": \"$260\", \"features\": [\"40-hour battery\", \"spatial audio\", \"Hi-Res Audio\", \"built-in microphone\"], \"colors\": [\"red\", \"gold\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Sandra Anderson | Cloud Architect | 8 years experience | Skills: React, System Design | Master's in Software Engineering from Caltech",
+    "output": "{\"name\": \"Sandra Anderson\", \"role\": \"Cloud Architect\", \"experience\": \"8 years\", \"skills\": [\"React\", \"System Design\"], \"education\": \"Master's in Software Engineering from Caltech\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Driving AI ethics and brand strategy at Salesforce as Data Analyst. 10+ years track record. Prior: Nvidia. MBA from UIUC.",
+    "output": "{\"name\": null, \"role\": \"Data Analyst\", \"company\": \"Salesforce\", \"previous_companies\": [\"Nvidia\"], \"experience\": \"10+ years\", \"skills\": [\"AI ethics\", \"brand strategy\"], \"education\": \"MBA from UIUC\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Mia Carter is a cloud architect with 1 year of experience. Skilled in Flask, PostgreSQL, Deep Learning, Redis and Spring Boot. Holds a PhD in Computer Science from UT Austin.",
+    "output": "{\"name\": \"Mia Carter\", \"role\": \"Cloud Architect\", \"experience\": \"1 year\", \"skills\": [\"Flask\", \"PostgreSQL\", \"Deep Learning\", \"Redis\", \"Spring Boot\"], \"education\": \"PhD in Computer Science from UT Austin\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The FreeBuds Neo (HP) is a top-rated headphone. For $383, you get built-in microphone, Bluetooth 5.3 and Bluetooth 5.0. It comes in red, purple, silver and black.",
+    "output": "{\"product_name\": \"FreeBuds Neo\", \"brand\": \"HP\", \"price\": \"$383\", \"features\": [\"built-in microphone\", \"Bluetooth 5.3\", \"Bluetooth 5.0\"], \"colors\": [\"red\", \"purple\", \"silver\", \"black\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Meet Olivia Yamamoto, a data scientist who has been in the industry for 8 years. Their expertise includes C++, FastAPI and JavaScript. They completed their Master's in AI from ETH Zurich.",
+    "output": "{\"name\": \"Olivia Yamamoto\", \"role\": \"Data Scientist\", \"experience\": \"8 years\", \"skills\": [\"C++\", \"FastAPI\", \"JavaScript\"], \"education\": \"Master's in AI from ETH Zurich\"}",
+    "category": "resume"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Tech Lead @ Stripe. Previously at TechCorp, Slack. 6 years of experience in public speaking, digital marketing and distributed systems. BS from Harvard.",
+    "output": "{\"name\": null, \"role\": \"Tech Lead\", \"company\": \"Stripe\", \"previous_companies\": [\"TechCorp\", \"Slack\"], \"experience\": \"6 years\", \"skills\": [\"public speaking\", \"digital marketing\", \"distributed systems\"], \"education\": \"BS from Harvard\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Looking for a new phone? The Xperia Elite by TechCorp features 48MP camera, Face ID, fast charging and 256GB storage and is available in black, space gray and graphite. Retail price: $391.",
+    "output": "{\"product_name\": \"Xperia Elite\", \"brand\": \"TechCorp\", \"price\": \"$391\", \"features\": [\"48MP camera\", \"Face ID\", \"fast charging\", \"256GB storage\"], \"colors\": [\"black\", \"space gray\", \"graphite\"]}",
+    "category": "product"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "Yuki Rivera | Senior Data Engineer | Google | 2+ years experience | Skills: TypeScript, blockchain, startup culture | Previously: Netflix | MBA from Columbia",
+    "output": "{\"name\": \"Yuki Rivera\", \"role\": \"Senior Data Engineer\", \"company\": \"Google\", \"previous_companies\": [\"Netflix\"], \"experience\": \"2+ years\", \"skills\": [\"TypeScript\", \"blockchain\", \"startup culture\"], \"education\": \"MBA from Columbia\"}",
+    "category": "bio"
+  },
+  {
+    "instruction": "Extract structured information from the following text and return valid JSON.",
+    "input": "The Bose Surface V2 is a premium tablet available for $750. Key specs: quad speakers, 128GB storage, M1 chip. Colors: midnight blue, starlight, navy and purple.",
+    "output": "{\"product_name\": \"Surface V2\", \"brand\": \"Bose\", \"price\": \"$750\", \"features\": [\"quad speakers\", \"128GB storage\", \"M1 chip\"], \"colors\": [\"midnight blue\", \"starlight\", \"navy\", \"purple\"]}",
+    "category": "product"
+  }
+]
