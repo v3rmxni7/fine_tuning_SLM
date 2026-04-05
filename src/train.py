@@ -1,14 +1,9 @@
 import json
 import torch
 from datasets import Dataset
-from transformers import (
-    AutoModelForCausalLM,
-    AutoTokenizer,
-    BitsAndBytesConfig,
-    TrainingArguments,
-)
+from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
-from trl import SFTTrainer
+from trl import SFTTrainer, SFTConfig
 
 from src.config import (
     MODEL_NAME, MAX_SEQ_LENGTH,
@@ -86,7 +81,7 @@ def train():
     val_dataset = prepare_training_data(val_data, tokenizer)
     print(f"  Train: {len(train_dataset)}, Val: {len(val_dataset)}")
 
-    training_args = TrainingArguments(
+    sft_config = SFTConfig(
         output_dir=OUTPUT_DIR,
         num_train_epochs=NUM_EPOCHS,
         per_device_train_batch_size=BATCH_SIZE,
@@ -103,15 +98,15 @@ def train():
         report_to="none",
         remove_unused_columns=False,
         optim="paged_adamw_8bit",
+        max_length=MAX_SEQ_LENGTH,
     )
 
     trainer = SFTTrainer(
         model=model,
-        args=training_args,
+        args=sft_config,
         train_dataset=train_dataset,
         eval_dataset=val_dataset,
         processing_class=tokenizer,
-        max_seq_length=MAX_SEQ_LENGTH,
     )
 
     print("Training started...")
