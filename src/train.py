@@ -14,7 +14,7 @@ from src.config import (
     MODEL_NAME, MAX_SEQ_LENGTH,
     LORA_R, LORA_ALPHA, LORA_DROPOUT, LORA_TARGET_MODULES,
     LEARNING_RATE, NUM_EPOCHS, BATCH_SIZE, GRADIENT_ACCUMULATION_STEPS,
-    WARMUP_RATIO, WEIGHT_DECAY, LOGGING_STEPS, EVAL_STEPS, SAVE_STRATEGY, FP16,
+    WEIGHT_DECAY, LOGGING_STEPS, EVAL_STEPS, SAVE_STRATEGY, FP16,
     TRAIN_FILE, VAL_FILE, OUTPUT_DIR, ADAPTER_DIR,
 )
 from src.formatting import format_chat_messages
@@ -93,7 +93,7 @@ def train():
         per_device_eval_batch_size=BATCH_SIZE,
         gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
         learning_rate=LEARNING_RATE,
-        warmup_ratio=WARMUP_RATIO,
+        warmup_steps=10,
         weight_decay=WEIGHT_DECAY,
         logging_steps=LOGGING_STEPS,
         eval_strategy="steps",
@@ -110,7 +110,7 @@ def train():
         args=training_args,
         train_dataset=train_dataset,
         eval_dataset=val_dataset,
-        tokenizer=tokenizer,
+        processing_class=tokenizer,
         max_seq_length=MAX_SEQ_LENGTH,
     )
 
