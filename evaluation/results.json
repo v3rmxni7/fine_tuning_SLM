@@ -1,0 +1,62 @@
+{
+  "comparison": [
+    {
+      "total_samples": 100,
+      "json_validity_rate": 0.04,
+      "exact_match_accuracy": 0.0,
+      "field_precision": 0.7,
+      "field_recall": 0.65,
+      "field_f1": 0.6722,
+      "failure_rate": 0.96,
+      "retry_rate": 0.0,
+      "avg_retries_per_sample": 0.0,
+      "retry_success_rate": 0,
+      "error_taxonomy": {
+        "invalid_json": 0,
+        "missing_field": 0,
+        "extra_field": 0,
+        "wrong_type": 0
+      },
+      "label": "Base Model"
+    },
+    {
+      "total_samples": 100,
+      "json_validity_rate": 1.0,
+      "exact_match_accuracy": 0.91,
+      "field_precision": 0.9854,
+      "field_recall": 0.9854,
+      "field_f1": 0.9854,
+      "failure_rate": 0.0,
+      "retry_rate": 0.0,
+      "avg_retries_per_sample": 0.0,
+      "retry_success_rate": 0,
+      "error_taxonomy": {
+        "invalid_json": 0,
+        "missing_field": 0,
+        "extra_field": 0,
+        "wrong_type": 0
+      },
+      "label": "Fine-tuned"
+    },
+    {
+      "total_samples": 100,
+      "json_validity_rate": 1.0,
+      "exact_match_accuracy": 0.91,
+      "field_precision": 0.9854,
+      "field_recall": 0.9854,
+      "field_f1": 0.9854,
+      "failure_rate": 0.0,
+      "retry_rate": 0.0,
+      "avg_retries_per_sample": 0.0,
+      "retry_success_rate": 0,
+      "error_taxonomy": {
+        "invalid_json": 0,
+        "missing_field": 0,
+        "extra_field": 0,
+        "wrong_type": 0
+      },
+      "label": "Fine-tuned + Guardrails"
+    }
+  ],
+  "qualitative_examples": []
+}

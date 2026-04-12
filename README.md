@@ -138,11 +138,14 @@ python evaluation/eval.py
 
 | Metric | Base Model | Fine-tuned | Fine-tuned + Guardrails |
 |--------|-----------|------------|------------------------|
-| JSON Validity | ~40-60% | ~85-95% | ~99% |
-| Exact Match | ~5-15% | ~65-80% | ~80-90% |
-| Field F1 | ~30-50% | ~80-90% | ~90-95% |
+| JSON Validity | 4% | 100% | 100% |
+| Exact Match | 0% | 91% | 91% |
+| Field Precision | 0.70 | 0.9854 | 0.9854 |
+| Field Recall | 0.65 | 0.9854 | 0.9854 |
+| Field F1 | 0.6722 | 0.9854 | 0.9854 |
+| Failure Rate | 96% | 0% | 0% |
 
-*(Actual results generated after training — see `evaluation/results.json`)*
+Evaluated on 100 test samples. Full results in `evaluation/results.json`.
 
 ## Dataset
 
